@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: results-app-pod
+  labels:
+    app: results-app
+spec:
+  containers:
+   - name: results-con
+     image: dockersamples/examplevotingapp_result:dotnet-alpine
+     ports:
+       - containerPort: 80
